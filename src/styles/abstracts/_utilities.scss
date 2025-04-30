@@ -1,0 +1,63 @@
+@import '../abstracts/variables';
+
+// FLEX UTILITIES
+$flex-alignments: (
+  center: center,
+  start: flex-start,
+  end: flex-end,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly,
+);
+
+@mixin flex-row($justify: center, $align: center, $wrap: wrap, $gap: null) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: $wrap;
+  justify-content: map-get($flex-alignments, $justify) or $justify;
+  align-items: map-get($flex-alignments, $align) or $align;
+
+  @if $gap != null {
+    gap: $gap;
+  }
+}
+
+@mixin flex-column(
+  $justify: center,
+  $align: center,
+  $wrap: nowrap,
+  $gap: null
+) {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: $wrap;
+  justify-content: map-get($flex-alignments, $justify) or $justify;
+  align-items: map-get($flex-alignments, $align) or $align;
+
+  @if $gap != null {
+    gap: $gap;
+  }
+}
+
+// Common aliases
+@mixin flex-center {
+  @include flex-row(center, center);
+}
+
+@mixin space-between-center {
+  @include flex-row(between, center);
+}
+
+// SHARE TOAST VISIBILITY STATES
+.share-toast {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(0.5rem);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.share-toast--visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
