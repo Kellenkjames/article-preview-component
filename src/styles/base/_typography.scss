@@ -1,0 +1,42 @@
+@import '../abstracts/variables';
+
+// Typography Base Styles
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: $font-body;
+  font-weight: $font-weight-medium;
+  color: $color-body;
+  background-color: $color-bg;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: $color-heading;
+  font-weight: $font-weight-bold;
+}
+
+// Paragraphs
+p {
+  margin: 0;
+}
+
+// Emphasis
+strong {
+  font-weight: $font-weight-bold;
+}
+
+em {
+  font-style: italic;
+}
