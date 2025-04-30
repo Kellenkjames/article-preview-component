@@ -42,14 +42,48 @@
                 <span class="profile__date">28 Jun 2020</span>
               </div>
             </div>
-            <button class="share-button" aria-label="Share article">
-              <!-- share icon -->
+            <button
+              class="share-button"
+              aria-label="Share article"
+              aria-expanded="false"
+            >
+              <img
+                src="./assets/images/icon-share.svg"
+                alt=""
+                aria-hidden="true"
+              />
             </button>
           </div>
 
           <!-- Share tooltip (conditionally visible) -->
-          <div class="share-toast visually-hidden" id="shareToast">
-            <!-- social icons -->
+          <div
+            class="share-toast hidden"
+            id="shareToast"
+            role="region"
+            aria-label="Share options"
+            aria-hidden="true"
+          >
+            <span class="share-toast__label">Share</span>
+            <ul class="share-toast__icons">
+              <li>
+                <a href="#" aria-label="Share on Facebook">
+                  <img src="./assets/images/icon-facebook.svg" alt="Facebook" />
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Share on Twitter">
+                  <img src="./assets/images/icon-twitter.svg" alt="Twitter" />
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Share on Pinterest">
+                  <img
+                    src="./assets/images/icon-pinterest.svg"
+                    alt="Pinterest"
+                  />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </article>
