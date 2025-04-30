@@ -84,7 +84,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.hidden {
+.visually-hidden {
   position: absolute !important;
   height: 1px;
   width: 1px;
