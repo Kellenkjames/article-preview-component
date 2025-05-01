@@ -5,9 +5,9 @@
 
 body {
   min-height: 100vh;
-  overflow-x: hidden;
   background-color: $color-bg;
   font-size: $font-body;
+  overflow-y: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -28,6 +28,7 @@ body {
 .wrapper {
   width: 100%;
   max-width: 73rem;
+  margin-block: 26rem;
   margin-inline: auto;
 
   @media (max-width: $breakpoint-md) {

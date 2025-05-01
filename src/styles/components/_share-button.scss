@@ -1,1 +1,26 @@
-// Button styles + active state styling
+@import '../abstracts/variables';
+@import '../abstracts/utilities';
+@import '../abstracts/mixins';
+
+.share-button {
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 50%;
+  background-color: $color-bg;
+  border: none;
+  cursor: pointer;
+
+  transition: background-color 0.4s ease-in-out, fill 0.4s ease-in-out;
+
+  svg {
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: $color-text-secondary;
+
+    svg > path {
+      fill: $white;
+    }
+  }
+}
