@@ -3,9 +3,7 @@
 @import '../abstracts/mixins';
 
 .card {
-  @include flex-row;
-  flex-wrap: nowrap;
-  align-items: flex-start;
+  @include flex-row(center, flex-start, nowrap);
 
   &__image {
     display: block;
@@ -14,6 +12,7 @@
     img {
       width: 100%;
       height: 28rem;
+      object-fit: cover;
       border-top-left-radius: 1rem;
       border-bottom-left-radius: 1rem;
     }
@@ -21,13 +20,13 @@
 
   &__content {
     @include flex-column;
-    gap: 2.4rem;
+    gap: $space-300;
     padding-block: 3rem;
     padding-inline: 4rem;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     background-color: $white;
-    box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
+    box-shadow: $box-shadow-card;
   }
 
   &__title {
