@@ -50,9 +50,9 @@ $flex-alignments: (
 
 // SHARE TOAST VISIBILITY STATES
 .share-toast {
-  visibility: hidden;
-  opacity: 0;
-  transform: translateY(0.5rem);
+  // visibility: hidden;
+  // opacity: 0;
+  // transform: translateY(0.5rem);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 

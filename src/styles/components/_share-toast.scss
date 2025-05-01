@@ -1,1 +1,49 @@
-// Tooltip container, icon row, arrow styling
+.share-wrapper {
+  position: relative;
+
+  .share-toast {
+    position: absolute;
+    bottom: $space-700; // positions toast 56px above button for triangle + touch buffer
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    background-color: $color-text-secondary;
+    width: 24.8rem;
+    padding-block: 1.8rem;
+    padding-inline: 3.8rem;
+
+    border-radius: 1rem;
+    box-shadow: $box-shadow-tooltip;
+
+    @include flex-row(center, center, nowrap);
+    gap: $space-200;
+
+    &__label {
+      @include text-tooltip;
+      font-weight: $font-weight-medium;
+      color: $white;
+      letter-spacing: 0.2rem;
+      text-transform: uppercase;
+    }
+
+    &__icons {
+      @include space-between-center;
+      gap: $space-200;
+      padding-left: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 0.8rem solid transparent;
+      border-right: 0.8rem solid transparent;
+      border-top: 0.8rem solid $color-text-secondary;
+    }
+  }
+}

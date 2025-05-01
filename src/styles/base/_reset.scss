@@ -38,6 +38,11 @@ a {
   color: inherit;
 }
 
+ul,
 p {
   margin: 0;
+}
+
+li {
+  list-style-type: none;
 }
