@@ -125,10 +125,9 @@ body {
 .profile {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: nowrap;
   justify-content: flex-start;
+  align-items: center;
 }
 .profile__img {
   width: 4rem;
@@ -140,8 +139,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
   align-items: flex-start;
   margin-block: 0.2rem;
 }
