@@ -117,6 +117,11 @@ body {
     width: 75%;
   }
 }
+@media (max-width: 600px) {
+  .wrapper {
+    width: 85%;
+  }
+}
 
 .share-toast {
   transition: opacity 0.3s ease, transform 0.3s ease;

@@ -37,4 +37,8 @@ body {
   @media (max-width: $breakpoint-md) {
     width: 75%;
   }
+
+  @media (max-width: $breakpoint-sm) {
+    width: 85%;
+  }
 }
