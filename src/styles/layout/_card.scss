@@ -32,6 +32,11 @@
     border-bottom-right-radius: 1rem;
     background-color: $white;
     box-shadow: $box-shadow-card;
+
+    @include respond(sm) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
   }
 
   &__title {

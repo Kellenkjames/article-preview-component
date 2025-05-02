@@ -29,16 +29,16 @@ body {
   margin-block: 26rem;
   margin-inline: auto;
 
-  @media (max-width: $breakpoint-lg) {
+  @include respond(lg) {
     max-width: 64rem;
     margin-block: 16rem;
   }
 
-  @media (max-width: $breakpoint-md) {
+  @include respond(md) {
     width: 75%;
   }
 
-  @media (max-width: $breakpoint-sm) {
+  @include respond(sm) {
     width: 85%;
   }
 }

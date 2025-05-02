@@ -200,8 +200,35 @@ body {
   color: #fff;
 }
 
+.share-toast {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.share-toast--visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .share-wrapper {
   position: relative;
+}
+.share-wrapper.desktop {
+  display: block;
+}
+@media (max-width: 600px) {
+  .share-wrapper.desktop .share-toast {
+    display: none;
+  }
+}
+.share-wrapper.mobile {
+  display: none;
+}
+@media (max-width: 600px) {
+  .share-wrapper.mobile {
+    display: block;
+    width: 100%;
+  }
 }
 .share-wrapper .share-toast {
   position: absolute;
@@ -209,7 +236,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  background-color: #6e8098;
+  background-color: #48556a;
   width: 24.8rem;
   padding-block: 1.8rem;
   padding-inline: 3.8rem;
@@ -222,6 +249,15 @@ body {
   align-items: center;
   gap: 1.6rem;
 }
+@media (max-width: 600px) {
+  .share-wrapper .share-toast {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
 .share-wrapper .share-toast__label {
   font-family: "Manrope", sans-serif;
   font-weight: 700;
@@ -229,7 +265,7 @@ body {
   line-height: 1.4;
   letter-spacing: 0.5px;
   font-weight: 500;
-  color: #fff;
+  color: #9daec2;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
@@ -253,6 +289,22 @@ body {
   border-left: 0.8rem solid transparent;
   border-right: 0.8rem solid transparent;
   border-top: 0.8rem solid #6e8098;
+}
+@media (max-width: 600px) {
+  .share-wrapper .share-toast::after {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .share-wrapper .share-social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1 1 auto;
+    gap: 2.4rem;
+  }
 }
 
 .share-toast {
@@ -303,6 +355,12 @@ body {
   border-bottom-right-radius: 1rem;
   background-color: #fff;
   box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
+}
+@media (max-width: 600px) {
+  .card__content {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
 .card__title {
   font-family: "Manrope", sans-serif;
