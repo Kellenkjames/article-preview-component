@@ -16,8 +16,7 @@
     border-radius: 1rem;
     box-shadow: $box-shadow-tooltip;
 
-    @include flex-row(center, center, nowrap);
-    gap: $space-200;
+    @include flex-row(center, center, nowrap, $space-200);
 
     &__label {
       @include text-tooltip;
