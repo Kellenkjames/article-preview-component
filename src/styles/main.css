@@ -230,6 +230,17 @@ body {
     width: 100%;
   }
 }
+@media (max-width: 600px) {
+  .share-wrapper.mobile .share-social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1 1 auto;
+    gap: 2.4rem;
+  }
+}
 .share-wrapper .share-toast {
   position: absolute;
   bottom: 5.6rem;
@@ -293,17 +304,6 @@ body {
 @media (max-width: 600px) {
   .share-wrapper .share-toast::after {
     display: none;
-  }
-}
-@media (max-width: 600px) {
-  .share-wrapper .share-social {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    flex: 1 1 auto;
-    gap: 2.4rem;
   }
 }
 

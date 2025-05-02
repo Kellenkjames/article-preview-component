@@ -22,6 +22,14 @@
       display: block;
       width: 100%;
     }
+
+    .share-social {
+      @include respond(sm) {
+        @include flex-row(start, center, nowrap);
+        flex: 1 1 auto;
+        gap: $space-300;
+      }
+    }
   }
 
   .share-toast {
@@ -78,14 +86,6 @@
       @include respond(sm) {
         display: none;
       }
-    }
-  }
-
-  .share-social {
-    @include respond(sm) {
-      @include flex-row(start, center, nowrap);
-      flex: 1 1 auto;
-      gap: $space-300;
     }
   }
 }
