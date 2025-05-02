@@ -36,12 +36,14 @@ $box-shadow-tooltip: 0px 10px 20px rgba(0, 0, 0, 0.1);
 // BREAKPOINTS
 $breakpoint-sm: 600px;
 $breakpoint-md: 768px;
+$breakpoint-layout-shift: 880px;
 $breakpoint-lg: 1024px;
 $breakpoint-xl: 1440px;
 
 $breakpoints: (
   sm: $breakpoint-sm,
   md: $breakpoint-md,
+  layout-shift: $breakpoint-layout-shift,
   lg: $breakpoint-lg,
   xl: $breakpoint-xl,
 );
