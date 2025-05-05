@@ -1,3 +1,3 @@
 export const state = {
-  tooltipVisible: false,
+  isTooltipVisible: false,
 };

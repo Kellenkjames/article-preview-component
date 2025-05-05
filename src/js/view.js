@@ -1,4 +1,4 @@
-class Tooltip {
+export default class Tooltip {
   constructor() {
     this.desktopWrapper = document.querySelector('.share-wrapper.desktop');
     this.desktopButton = document.querySelector('.share-button.desktop');
