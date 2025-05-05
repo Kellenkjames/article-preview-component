@@ -7,7 +7,6 @@ const isClickInsideTooltip = target =>
   target.closest('.share-button') || target.closest('.share-toast');
 
 const init = () => {
-  console.log('controller initialized');
   const handleDesktopToggle = e => {
     if (!e.target.closest('button')) return;
     tooltip.toggle();
