@@ -237,6 +237,13 @@ body {
   }
 }
 @media (max-width: 600px) {
+  .share-wrapper.mobile .share-button {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+@media (max-width: 600px) {
   .share-wrapper.mobile .share-social {
     display: flex;
     flex-direction: row;

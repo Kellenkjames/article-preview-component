@@ -7,21 +7,22 @@
 
   &.desktop {
     @include respond(sm) {
-      visibility: hidden;
+      visibility: hidden; // Hide desktop wrapper at small viewports (mobile uses footer layout instead)
     }
   }
 
   &.mobile {
     .share-toast {
       @include respond(sm) {
-        visibility: visible;
-        opacity: 1;
-        position: relative;
-        width: 100%;
-        bottom: 0;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        transform: translateX(-50%) translateY(0);
+        @include mobile-toast-reset;
+      }
+    }
+
+    .share-button {
+      @include respond(sm) {
+        pointer-events: none;
+        opacity: 0.5;
+        cursor: not-allowed;
       }
     }
 

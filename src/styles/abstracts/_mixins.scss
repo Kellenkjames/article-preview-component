@@ -33,6 +33,17 @@
   letter-spacing: 0.5px;
 }
 
+@mixin mobile-toast-reset {
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  transform: translateX(-50%) translateY(0);
+}
+
 // RESPONSIVE
 @mixin respond($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
