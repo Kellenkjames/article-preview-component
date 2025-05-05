@@ -48,15 +48,19 @@ $flex-alignments: (
   @include flex-row(between, center);
 }
 
-.share-toast {
-  visibility: hidden;
-  opacity: 0;
-  transform: translateY(0.5rem);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
+.share-wrapper {
+  .share-toast {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-50%) translateY(0.5rem);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
 
-.share-toast--visible {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
+  &.is-visible {
+    .share-toast {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(-50%) translateY(0); // animate upward from center
+    }
+  }
 }
