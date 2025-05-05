@@ -5,13 +5,9 @@
 .share-wrapper {
   position: relative;
 
-  &.desktop {
-    display: block;
-
-    .share-toast {
-      @include respond(sm) {
-        display: none;
-      }
+  .share-toast {
+    @include respond(sm) {
+      display: none;
     }
   }
 

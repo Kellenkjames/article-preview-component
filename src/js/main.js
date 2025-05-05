@@ -1,1 +1,1 @@
-// Entry point. import all modules and call the initializer.
+import './controller.js';

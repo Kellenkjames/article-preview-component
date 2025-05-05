@@ -124,6 +124,9 @@ body {
 }
 
 .share-toast {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(0.5rem);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -173,6 +176,9 @@ body {
 }
 
 .share-toast {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(0.5rem);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -201,6 +207,9 @@ body {
 }
 
 .share-toast {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(0.5rem);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -213,11 +222,8 @@ body {
 .share-wrapper {
   position: relative;
 }
-.share-wrapper.desktop {
-  display: block;
-}
 @media (max-width: 600px) {
-  .share-wrapper.desktop .share-toast {
+  .share-wrapper .share-toast {
     display: none;
   }
 }
@@ -308,6 +314,9 @@ body {
 }
 
 .share-toast {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(0.5rem);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 

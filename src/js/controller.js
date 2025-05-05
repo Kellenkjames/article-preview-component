@@ -1,9 +1,10 @@
-import { state } from './model';
-import Tooltip from './view';
+import { state } from './model.js';
+import Tooltip from './view.js';
 
 const tooltip = new Tooltip();
 
 const init = () => {
+  console.log('controller initialized');
   const handleToggle = e => {
     if (!e.target.closest('button')) return;
     tooltip.toggle();
