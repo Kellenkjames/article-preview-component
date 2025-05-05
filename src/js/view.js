@@ -8,24 +8,26 @@ class Tooltip {
   }
 
   show() {
-    if (this.desktopButton) {
-      this.desktopButton.setAttribute('aria-expanded', 'true');
-    }
+    this.desktopButton?.setAttribute('aria-expanded', 'true');
+    this.mobileButton?.setAttribute('aria-expanded', 'true');
 
-    if (this.mobileButton) {
-      this.mobileButton.setAttribute('aria-expanded', 'true');
-    }
-
-    if (this.desktopWrapper) {
-      this.desktopWrapper.classList.add('is-visible');
-    }
-
-    if (this.mobileWrapper) {
-      this.mobileWrapper.classList.add('is-visible');
-    }
+    this.desktopWrapper?.classList.add('is-visible');
+    this.mobileWrapper?.classList.add('is-visible');
   }
 
-  hide() {}
+  hide() {
+    this.desktopButton?.setAttribute('aria-expanded', 'false');
+    this.mobileButton?.setAttribute('aria-expanded', 'false');
 
-  toggle() {}
+    this.desktopWrapper?.classList.remove('is-visible');
+    this.mobileWrapper?.classList.remove('is-visible');
+  }
+
+  toggle() {
+    const isVisible =
+      this.desktopWrapper?.classList.contains('is-visible') ||
+      this.mobileWrapper?.classList.contains('is-visible');
+
+    isVisible ? this.hide() : this.show();
+  }
 }
