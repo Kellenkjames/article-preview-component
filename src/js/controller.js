@@ -3,6 +3,9 @@ import Tooltip from './view.js';
 
 const tooltip = new Tooltip();
 
+const isClickInsideTooltip = target =>
+  target.closest('.share-button') || target.closest('.share-toast');
+
 const init = () => {
   console.log('controller initialized');
   const handleToggle = e => {
@@ -15,10 +18,7 @@ const init = () => {
   tooltip.mobileButton?.addEventListener('click', handleToggle);
 
   document.addEventListener('click', e => {
-    const isInside =
-      e.target.closest('.share-button') || e.target.closest('.share-toast');
-
-    if (!isInside && state.isTooltipVisible) {
+    if (!isClickInsideTooltip(e.target) && state.isTooltipVisible) {
       tooltip.hide();
       state.isTooltipVisible = false;
     }
