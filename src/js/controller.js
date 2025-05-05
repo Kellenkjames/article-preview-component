@@ -8,14 +8,13 @@ const isClickInsideTooltip = target =>
 
 const init = () => {
   console.log('controller initialized');
-  const handleToggle = e => {
+  const handleDesktopToggle = e => {
     if (!e.target.closest('button')) return;
     tooltip.toggle();
     state.isTooltipVisible = !state.isTooltipVisible;
   };
 
-  tooltip.desktopButton?.addEventListener('click', handleToggle);
-  tooltip.mobileButton?.addEventListener('click', handleToggle);
+  tooltip.desktopButton?.addEventListener('click', handleDesktopToggle);
 
   document.addEventListener('click', e => {
     if (!isClickInsideTooltip(e.target) && state.isTooltipVisible) {

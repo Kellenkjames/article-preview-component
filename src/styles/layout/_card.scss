@@ -52,5 +52,9 @@
   &__footer {
     @include space-between-center;
     width: 100%;
+
+    @include respond(sm) {
+      display: none;
+    }
   }
 }
