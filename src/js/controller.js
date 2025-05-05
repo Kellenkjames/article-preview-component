@@ -23,6 +23,13 @@ const init = () => {
       state.isTooltipVisible = false;
     }
   });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && state.isTooltipVisible) {
+      tooltip.hide();
+      state.isTooltipVisible = false;
+    }
+  });
 };
 
 init();
