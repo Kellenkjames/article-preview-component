@@ -23,7 +23,7 @@ This project includes a dynamic tooltip toggle triggered via JavaScript — prac
 
 - HTML5
 - SCSS (BEM, Tokens, Mixins)
-- JavaScript (ES6+ Modules)
+- JavaScript (ES6+, MVC-lite architecture, DOM encapsulation)
 - Git / GitHub
 - GitHub Pages (Deployment)
 - Figma (Design Reference)
