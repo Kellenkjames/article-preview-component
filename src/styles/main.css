@@ -350,6 +350,7 @@ body {
 @media (max-width: 600px) {
   .card__image img {
     border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
   }
 }
 .card__content {
